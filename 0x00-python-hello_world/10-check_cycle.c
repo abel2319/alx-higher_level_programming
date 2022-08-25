@@ -1,10 +1,10 @@
 #include "lists.h"
 /**
- * check_cycle - Verify if a list is a cycle or not
+ * check_cycle - Verify if a list has a cycle in it or not
  * @list: list where we verify
  *
- * Return: 1 if is a cycle
- * 0 if not
+ * Return: 1 if yes
+ * 0 if no
  */
 int check_cycle(listint_t *list)
 {
