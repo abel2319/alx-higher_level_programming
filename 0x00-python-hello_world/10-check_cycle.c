@@ -21,7 +21,8 @@ int check_cycle(listint_t *list)
 			{
 				return (1);
 			}
-			tmp = tmp->next;
+			tmp = tmp->next->next;
+			head = head->next;
 		}
 	}
 	return (0);
