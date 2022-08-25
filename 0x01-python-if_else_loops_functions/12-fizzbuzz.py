@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def fizzbuzz():
     print("1 2", end="")
     for i in range(3, 101):
