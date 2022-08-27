@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import * from calculator_1
+    import sub, add, mul, div from calculator_1
     import sys
     nbr = len(sys.argv)
     if (nbr != 4):
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
-    
+
     op = sys.argv[2]
     if (op in not "+-*/"):
         print("Unknown operator. Available operators: +, -, * and /")
