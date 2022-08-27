@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import sub, add, mul, div from calculator_1
+    import calculator_1
     import sys
     nbr = len(sys.argv)
     if (nbr != 4):
@@ -15,10 +15,10 @@ if __name__ == "__main__":
     a = int(sys.argv[1])
     b = int(sys.argv[3])
     if (op == '+'):
-        print("{} + {} = {}".format(a, b, add(a, b)))
+        print("{} + {} = {}".format(a, b, calculator_1.add(a, b)))
     elif (op == '-'):
-        print("{} - {} = {}".format(a, b, sub(a, b)))
+        print("{} - {} = {}".format(a, b, calculator_1.sub(a, b)))
     elif (op == '*'):
-        print("{} * {} = {}".format(a, b, mul(a, b)))
+        print("{} * {} = {}".format(a, b, calculator_1.mul(a, b)))
     else (op == '/'):
-        print("{} / {} = {}".format(a, b, div(a, b)))
+        print("{} / {} = {}".format(a, b, calculator_1.div(a, b)))
