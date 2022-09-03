@@ -8,4 +8,4 @@ def uniq_add(my_list=[]):
         for i in range(1, len(new_list)):
             if new_list[i] != new_list[i - 1]:
                 rtn += new_list[i]
-    return (rtn)
+    return (0)
