@@ -30,36 +30,37 @@ int is_palindrome(listint_t **head)
 	int i = 0, nbr = 0, j = 0;
 	listint_t *tmp, *begin, *end;
 
-	nbr = number_elts(head);
-	tmp = *head;
-	begin = *head;
-	end = *head;
-
-	while (tmp != NULL || tmp->next != NULL)
+	if (*head != NULL)
 	{
-		tmp = tmp->next;
-	}
+		nbr = number_elts(head);
+		tmp = *head;
+		begin = *head;
+		end = *head;
 
-	while (i != (nbr / 2))
-	{
-		end = end->next;
-		i++;
-	}
-
-	while (i != 0)
-	{
-		if (tmp->n != begin->n)
-			return (0);
-		else
+		while (tmp->next != NULL)
 		{
-			tmp = end;
-			for(j = 0; j < i; j++)
+			tmp = tmp->next;
+		}
+
+		while (i != (nbr / 2))
+		{
+			end = end->next;
+			i++;
+		}
+
+		while (i != 0)
+		{
+			if (tmp->n != begin->n)
+				return (0);
+			else
 			{
 				begin = begin->next;
-				tmp = tmp->next;
+				tmp = end;
+				for(j = 0; j < (i - 2); j++)
+					tmp = tmp->next;
 			}
+			i--;
 		}
-		i--;
 	}
 	return (1);
 }
