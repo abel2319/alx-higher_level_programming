@@ -27,18 +27,18 @@ int number_elts(listint_t **head)
  */
 int is_palindrome(listint_t **head)
 {
-	int i = 0, nbr = 0, j = 0;
+	int i = 0, nbr = 0, j = 0, t = 0;
 	listint_t *tmp, *begin, *end;
 
 	if (*head != NULL)
 	{
-		nbr = number_elts(head);
 		tmp = *head;
 		begin = *head;
 		end = *head;
 
 		while (tmp->next != NULL)
 		{
+			nbr++;
 			tmp = tmp->next;
 		}
 
@@ -56,7 +56,8 @@ int is_palindrome(listint_t **head)
 			{
 				begin = begin->next;
 				tmp = end;
-				for(j = 0; j < (i - 2); j++)
+				t = (nbr % 2 == 0) ? i - 2 : i - 1;
+				for(j = 0; j < t; j++)
 					tmp = tmp->next;
 			}
 			i--;
