@@ -27,7 +27,7 @@ int number_elts(listint_t **head)
  */
 int is_palindrome(listint_t **head)
 {
-	int i = 0, nbr = 0, j = 0, t = 0;
+	int i = 0, nbr = 1, j = 0, t = 0;
 	listint_t *tmp, *begin, *end;
 
 	if (*head != NULL)
