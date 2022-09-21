@@ -17,27 +17,30 @@ additon of two integers
 addition of two floats
     >>> add_integer(6.6, 2.05)
     8
-    
-    >>> add_integer(6, 2.05)
-    8
 
 using one argument, the addition will be done with 98
     >>> add_integer(6)
     104
 
-If either argument is a non-integer or non-float, a TypeError is raised:
+Possible Exceptions
+If either argument is a non-integer or non-float, a TypeError is raised
+Convert infinity, NaN
     >>> add_integer("abel", 23)
     Traceback (most recent call last):
     TypeError: a must be an integer
 
-    >>> add_integer(19, "abel")
+    >>> add_integer(float('NaN'))
     Traceback (most recent call last):
-    TypeError: b must be an integer
-
-    >>> add_integer(None)
-    Traceback (most recent call last):
-    TypeError: a must be an integer
+    ValueError: cannot convert float NaN to integer
  
-    >>> add_integer(0, None)
+    >>> add_integer(10, float('NaN'))
     Traceback (most recent call last):
-    TypeError: b must be an integer
+    ValueError: cannot convert float NaN to integer
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    >>> add_integer(0, float('Inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
