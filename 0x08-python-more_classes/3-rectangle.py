@@ -66,12 +66,6 @@ class Rectangle:
         """method that returns a string representation of the rectangle
         """
         string = ""
-        if self.width == 0 or self.hight == 0:
-            return ("")
-        for j in range(0, self.height):
-            for i in range(0, self.width):
-                string += '#'
-            string += '\n'
         return (string)
 
     def __str__(self):

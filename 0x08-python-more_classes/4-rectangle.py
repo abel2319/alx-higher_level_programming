@@ -65,13 +65,7 @@ class Rectangle:
     def __rep__(self):
         """method that returns a string representation of the rectangle
         """
-        string = ""
-        if self.width == 0 or self.hight == 0:
-            return ("")
-        for j in range(0, self.height):
-            for i in range(0, self.width):
-                string += '#'
-            string += '\n'
+        string = f'Rectangle({self.__width}, {self.__height})'
         return (string)
 
     def __str__(self):

@@ -5,6 +5,8 @@ class Rectangle:
     '''class Rectangle
     '''
 
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """init method to define object's attributes
         Args:
@@ -13,6 +15,8 @@ class Rectangle:
 
         self.width = width
         self.height = height
+
+        Rectangle.number_of_instances += 1;
 
     @property
     def width(self):
@@ -84,3 +88,4 @@ class Rectangle:
         """method that delete an instance of the class
         """
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1;
