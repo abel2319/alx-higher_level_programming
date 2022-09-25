@@ -82,7 +82,8 @@ class Rectangle:
         for j in range(0, self.__height):
             for i in range(0, self.__width):
                 string += '#'
-            string += '\n'
+            if j < (self.__height - 1):
+                string += '\n'
         return (string)
 
     def __del__(self):
