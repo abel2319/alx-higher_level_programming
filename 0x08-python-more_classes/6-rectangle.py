@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''This module defines a class rectangle'''
 
+
 class Rectangle:
     '''class Rectangle
     '''
@@ -16,7 +17,7 @@ class Rectangle:
         self.width = width
         self.height = height
 
-        Rectangle.number_of_instances += 1;
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -35,7 +36,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("width mest be >= 0")
         self.__width = value
-    
+
     @property
     def height(self):
         """method that return the height of the square
@@ -88,4 +89,4 @@ class Rectangle:
         """method that delete an instance of the class
         """
         print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1;
+        Rectangle.number_of_instances -= 1
