@@ -19,7 +19,7 @@ class Rectangle:
     def width(self):
         """method that return the width of the square
         """
-        return (self.width)
+        return (self.__width)
 
     @width.setter
     def width(self, value):
@@ -29,13 +29,13 @@ class Rectangle:
             raise TypeError("width mest be an integer")
         if value < 0:
             raise ValueError("width mest be >= 0")
-        self.width = value
+        self.__width = value
 
     @property
     def height(self):
         """method that return the height of the square
         """
-        return (self.width)
+        return (self.__width)
 
     @height.setter
     def height(self, value):
@@ -45,4 +45,4 @@ class Rectangle:
             raise TypeError("height mest be an integer")
         if value < 0:
             raise ValueError("height mest be >= 0")
-        self.height = value
+        self.__height = value
