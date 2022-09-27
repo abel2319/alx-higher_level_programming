@@ -7,6 +7,8 @@ def write_file(filename="", text=""):
     Args:
         filename (str): the name of file
         text (str): the string
+    Return: the number of characters written
     '''
     with open(filename, mode="w", encoding="utf-8") as file:
         file.write(text)
+        return (len(text))
