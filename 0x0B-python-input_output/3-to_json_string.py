@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 '''encode with json'''
+    import json
 
 
 def to_json_string(my_obj):
@@ -8,5 +9,4 @@ def to_json_string(my_obj):
         my_obj (obj): object
     Return: the json representation of my_obj
     '''
-    import json
     return (json_dump(my_obj))
