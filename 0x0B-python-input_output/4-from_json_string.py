@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 '''decode in Python'''
+import json
 
 
 def to_json_string(my_obj):
@@ -8,5 +9,4 @@ def to_json_string(my_obj):
         my_obj (obj): object
     Return: the python representation of my_obj
     '''
-    import json
     return (json_loads(my_obj))
