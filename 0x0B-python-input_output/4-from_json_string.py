@@ -9,4 +9,4 @@ def from_json_string(my_str):
         my_obj (obj): object
     Return: the python representation of my_obj
     '''
-    return (json_loads(my_str))
+    return (json.loads(my_str))
