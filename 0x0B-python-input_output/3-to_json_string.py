@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''encode with json'''
-    import json
+import json
 
 
 def to_json_string(my_obj):
