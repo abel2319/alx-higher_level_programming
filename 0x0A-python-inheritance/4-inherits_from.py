@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+'''Module for the function inhertis_from'''
 
 
 def inherits_from(obj, a_class):
@@ -11,4 +11,4 @@ def inherits_from(obj, a_class):
     Otherwize False
     '''
     return (True if issubclass(type(obj), a_class) and
-                     (type(obj) != a_class) else False)
+            (type(obj) != a_class) else False)
