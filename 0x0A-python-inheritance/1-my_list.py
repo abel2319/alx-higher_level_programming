@@ -4,7 +4,11 @@
 
 class MyList(list):
     '''Class MyList that inherits from list'''
+    def __init__(self):
+        '''Initialization'''
+        super().__init__()
+
     def print_sorted(self):
-        rtn = self.copy()
-        rtn.sort()
+        '''Return the list sorted'''
+        rtn = sorted(self)
         print(rtn)
