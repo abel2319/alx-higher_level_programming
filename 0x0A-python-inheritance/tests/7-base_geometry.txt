@@ -1,0 +1,43 @@
+The ``7-base_geometry`` module
+======================
+
+Using ``class BaseGeometry``
+-------------------
+
+First import ``BaseGeometry`` from the ``7-base_geometry`` module:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Now we use it:
+
+check instantiation
+	>>> merino = BaseGeometry()
+	>>> type(merino)
+	<class '7-base_geometry.BaseGeometry'>
+
+Check for area failure:
+	>>> abel = BaseGeometry()
+	>>> abel.area()
+	Traceback (most recent call last):
+	...
+	Exception: area() is not implemented
+
+Check if an argument is past to the area:
+	>>> abel.area(5)
+	Traceback (most recent call last):
+        ...
+	TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
+
+Check integer validator for integer:
+	>>> abel.integer_validator("integer", 1)
+
+Check integer validator for integer less or equal than 0:
+	  >>> abel.integer_validator("integer", 0)
+	  Traceback (most recent call last):
+          ...
+          ValueError: integer must be greater than 0
+
+	  >>> abel.integer_validator("integer", -1)
+	  Traceback (most recent call last):
+          ...
+          ValueError: integer must be greater than 0
