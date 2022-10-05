@@ -26,7 +26,7 @@ Check if an argument is past to the area:
 	>>> abel.area(5)
 	Traceback (most recent call last):
         ...
-	TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
+	TypeError: area() takes 1 positional argument but 2 were given
 
 Check integer validator for integer:
 	>>> abel.integer_validator("integer", 1)
@@ -41,3 +41,9 @@ Check integer validator for integer less or equal than 0:
 	  Traceback (most recent call last):
           ...
           ValueError: integer must be greater than 0
+
+check integer validator without arguments
+	>>> abel.integer_validator()
+	Traceback (most recent call last):
+	...
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
