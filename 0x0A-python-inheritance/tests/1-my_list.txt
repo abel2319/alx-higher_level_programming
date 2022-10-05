@@ -10,15 +10,18 @@ First import ``MyList`` from the ``1-my_list`` module:
 
 Now we use it:
 
-check instabtiation
+check instantiation
 	>>> merino = MyList()
 	>>> type(merino)
 	<class '1-my_list.MyList'>
 
-
 Verify that MyList inherits from list:
 	>>> issubclass(MyList, list)
 	True
+
+check __str__
+	>>> print(MyList)
+	<class '1-my_list.MyList'>
 
 sort an empty list
 	>>> l = MyList()
