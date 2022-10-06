@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+'''Module for class Rectangle'''
 from models.base import Base
 
 
@@ -59,36 +60,36 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """method that return the width of the square
+        """method that return the x of the square
         """
         return (self.__x)
 
     @width.setter
     def x(self, value):
-        """mtehod that retrieve the width of the square
+        """method that retrieve the x of the square
         Args:
-            value (int): the new value of width
+            value (int): the new value of x
         """
         if type(value) is not int:
-            raise TypeError("width must be an integer")
+            raise TypeError("x must be an integer")
         if value < 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError("x must be >= 0")
         self.__x = value
     
     @property
     def y(self):
-        """method that return the width of the square
+        """method that return the y of the rectangle
         """
         return (self.__y)
 
     @y.setter
     def y(self, value):
-        """mtehod that retrieve the width of the square
+        """method that retrieve the y of the rectangle
         Args:
-            value (int): the new value of width
+            value (int): the new value of y
         """
         if type(value) is not int:
-            raise TypeError("width must be an integer")
+            raise TypeError("y must be an integer")
         if value < 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError("y must be >= 0")
         self.__y = value
