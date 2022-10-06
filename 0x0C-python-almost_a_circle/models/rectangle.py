@@ -125,32 +125,46 @@ class Rectangle(Base):
                                                         self.width,
                                                         self.height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''update all attribute of an instance
         Args:
             args (list): the list of arguments
         '''
-        if len(args) == 1:
-            self.id = args[0]
+        if args and len(args) > 0:
+            if len(args) == 1:
+                self.id = args[0]
 
-        elif len(args) == 2:
-            self.id = args[0]
-            self.width = args[1]
+            elif len(args) == 2:
+                self.id = args[0]
+                self.width = args[1]
 
-        elif len(args) == 3:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
+            elif len(args) == 3:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
 
-        elif len(args) == 4:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-            self.x = args[3]
+            elif len(args) == 4:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
 
-        elif len(args) == 5:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-            self.x = args[3]
-            self.y = args[4]
+            elif len(args) == 5:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+
+        elif kwargs:
+            for arg, val in kwargs.items():
+                if arg == "id":
+                    self.id = val
+                elif k == "width":
+                    self.width = val
+                elif k == "height":
+                    self.height = val
+                elif k == "x":
+                    self.x = val
+                elif k == "y":
+                    self.y = val
