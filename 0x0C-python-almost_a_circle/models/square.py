@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-''''''
+'''Module that defines the class square'''
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    ''''''
+    '''Class Square that enherits from Rectangle'''
     def __init__(self, size, x=0, y=0, id=None):
         '''Initialization
         Args:
@@ -16,7 +16,7 @@ class Square(Rectangle):
         super().__init__(self, size, size, x, y, id)
 
     def __str__(self):
-        ''''''
+        '''Representation of a square'''
         return ("[square] ({}) {}/{} - {}".foramt(self.id,
                                                   self.__x,
                                                   self.__y,
