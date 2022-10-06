@@ -13,11 +13,11 @@ class Square(Rectangle):
             y (int): ordonate
             id (int): id
         '''
-        super().__init__(self, size, size, x, y, id)
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         '''Representation of a square'''
-        return ("[square] ({}) {}/{} - {}".foramt(self.id,
-                                                  self.__x,
-                                                  self.__y,
-                                                  self.__size))
+        return ("[square] ({}) {}/{} - {}".format(self.id,
+                                                  self.x,
+                                                  self.y,
+                                                  self.width))
