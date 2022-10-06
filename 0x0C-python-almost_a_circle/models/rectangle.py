@@ -160,11 +160,11 @@ class Rectangle(Base):
             for arg, val in kwargs.items():
                 if arg == "id":
                     self.id = val
-                elif k == "width":
+                elif arg == "width":
                     self.width = val
-                elif k == "height":
+                elif arg == "height":
                     self.height = val
-                elif k == "x":
+                elif arg == "x":
                     self.x = val
-                elif k == "y":
+                elif arg == "y":
                     self.y = val
