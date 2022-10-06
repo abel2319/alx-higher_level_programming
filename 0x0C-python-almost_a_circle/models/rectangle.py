@@ -105,7 +105,11 @@ class Rectangle(Base):
         string = ""
         if self.__width == 0 or self.__height == 0:
             return ("")
+        for i in range(0, self.__y):
+            string += '\n'
         for j in range(0, self.__height):
+            for i in range(0, self.__x):
+                string += ' '
             for i in range(0, self.__width):
                 string += "#"
             if j < (self.__height - 1):
