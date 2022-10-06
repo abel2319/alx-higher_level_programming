@@ -7,7 +7,7 @@ class Rectangle(Base):
     '''class Rectangle that inherits from base
     '''
 
-    def __init__(self, width, height, x=0, y=0, id=None): 
+    def __init__(self, width, height, x=0, y=0, id=None):
         """init method to define object's attributes
         Args:
             width (int): the width of the rectangle
@@ -64,7 +64,7 @@ class Rectangle(Base):
         """
         return (self.__x)
 
-    @width.setter
+    @x.setter
     def x(self, value):
         """method that retrieve the x of the square
         Args:
@@ -75,7 +75,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
-    
+
     @property
     def y(self):
         """method that return the y of the rectangle
