@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''Module that defines the base'''
 
+
 class Base:
     '''class Base
     Args:
