@@ -1,40 +1,18 @@
-The ``models`` module
-======================
+#!/usr/bin/python3
+"""Unittest class Rectangle
+"""
+import unittest
+from models.base import Base
+from models.rectangle import Rectangle
 
-Using ``Rectangle``
--------------------
 
-First import ``Reactangle`` from the ``models/rectangle`` module:
+class TestRectangle_creation(unittest.TestCase):
+    '''Testing instantiation of class Rectangle
+    '''
 
-    >>> from models.rectangle import Rectangle
+    def test_inheritance_from_base(self):
+        self.assertIsInstance(Rectangle(0, 0), Base)
 
-Now we use it:
 
-check normal instantiation
-	>>> merino = Rectangle(10, 2, 0, 0, 12)
-	>>> type(merino)
-	<class 'models.rectangle.Rectangle'>
-
-chech id auto encrement without give when a new instance is created
-	>>> print(merino.id)
-	12
-
-chech instantiation with just 2 arguments
-	>>> abel = Rectangle(10, 2)
-	>>> print(abel.id)
-	4
-
-	>>> print(abel.width)
-	10
-	
-	>>> print(abel.height)
-	2
-
-	>>> print(abel.x)
-	0
-	
-	>>> print(abel.y)
-	0
-	
-	>>> print(abel.id)
-	1
+if __name__ == "__main__":
+    unittest.main()

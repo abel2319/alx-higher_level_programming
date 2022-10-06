@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -82,7 +82,7 @@ class Rectangle(Base):
         return (self.__y)
 
     @y.setter
-    def width(self, value):
+    def y(self, value):
         """mtehod that retrieve the width of the square
         Args:
             value (int): the new value of width

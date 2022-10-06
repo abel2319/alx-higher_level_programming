@@ -11,8 +11,8 @@ class TestBase_instantiation(unittest.TestCase):
     def test_no_arg(self):
         a = Base()
         b = Base()
-        self.assertEqual(a.id, 1)
-        self.assertEqual(b.id, 2)
+        self.assertEqual(a.id, 4)
+        self.assertEqual(b.id, a.id + 1)
 
     def test_None_id(self):
         b = Base(None)
@@ -52,3 +52,7 @@ class TestBase_instantiation(unittest.TestCase):
     def test_two_args(self):
         with self.assertRaises(TypeError):
             Base(1, 2)
+
+
+if __name__ == "__main__":
+    unittest.main()
