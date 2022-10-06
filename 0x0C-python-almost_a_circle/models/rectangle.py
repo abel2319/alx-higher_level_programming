@@ -100,14 +100,23 @@ class Rectangle(Base):
         return (self.__height * self.__width)
 
     def display(self):
-        """method that returns a string representation of the rectangle
+        """method that prints a string representation of the rectangle
         """
         string = ""
         if self.__width == 0 or self.__height == 0:
             return ("")
         for j in range(0, self.__height):
             for i in range(0, self.__width):
-                string += #
+                string += "#"
             if j < (self.__height - 1):
                 string += '\n'
-        print (string)
+        print(string)
+
+    def __str__(self):
+        """method that returns a string representation of the rectangle
+        """
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                        self.x,
+                                                        self.y,
+                                                        self.width,
+                                                        self.height))
