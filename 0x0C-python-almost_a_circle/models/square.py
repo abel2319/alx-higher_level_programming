@@ -41,6 +41,7 @@ class Square(Rectangle):
         '''update all attribute of an instance
         Args:
             args (list): the list of arguments
+            kwargs (dict): the dict of arguemnts
         '''
         if args and len(args) > 0:
             if len(args) == 1:
@@ -70,3 +71,4 @@ class Square(Rectangle):
                 elif arg == "x":
                     self.x = val
                 elif arg == "y":
+                    self.y = val
