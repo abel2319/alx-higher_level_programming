@@ -21,6 +21,7 @@ class Square(Rectangle):
                                                   self.x,
                                                   self.y,
                                                   self.width))
+
     @property
     def size(self):
         """method that return the size of the square
