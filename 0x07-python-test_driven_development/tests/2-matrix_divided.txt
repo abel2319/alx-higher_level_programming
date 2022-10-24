@@ -43,3 +43,9 @@ Missing one argument
 Division by infinity
 >>> print(matrix_divided(matrix, float('inf')))
 [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+    
+division by a string
+    >>> print(matrix_divided([[1, 2, 3],[4, 5, 6]], "abel"))
+    Traceback (most recent call last):
+    TypeError: div must be a number
+
