@@ -30,8 +30,8 @@ def matrix_divided(matrix, div):
                                 "must have the same size")
             for j in i:
                 if (type(j) is not int) and (type(j) is not float):
-                    raise TypeError("matrix must be a matrix (list of lists) " +
-                                    "of integers/floats")
+                    raise TypeError("matrix must be a matrix (list of lists)" +
+                                    " of integers/floats")
 
     for i in matrix:
         tmp_matrix.append([round((j / div), 2) for j in i])
