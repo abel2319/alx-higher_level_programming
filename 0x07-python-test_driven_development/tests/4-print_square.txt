@@ -20,7 +20,7 @@ normal usage
 using non-int argument
     >>> print_square("2")
     Traceback (most recent call last):
-    TypeError: size msut be an integer
+    TypeError: size must be an integer
 
 pass any arguments
     >>> print_square()
@@ -30,4 +30,4 @@ pass any arguments
 pass infinity
     >>> print_square(float('inf'))
     Traceback (most recent call last):
-    TypeError: size msut be an integer
+    TypeError: size must be an integer
