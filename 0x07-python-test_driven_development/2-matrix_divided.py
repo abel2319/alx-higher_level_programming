@@ -30,7 +30,7 @@ def matrix_divided(matrix, div):
                                 "must have the same size")
             for j in i:
                 if (type(j) is not int) and (type(j) is not float):
-                    raise TypeError("matrix must be a matrix (list of lists) +"
+                    raise TypeError("matrix must be a matrix (list of lists) " +
                                     "of integers/floats")
 
     for i in matrix:
