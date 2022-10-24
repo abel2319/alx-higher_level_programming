@@ -22,7 +22,7 @@ def matrix_divided(matrix, div):
     d = len(matrix[0])
     for i in matrix:
         if (type(i) is not list):
-            raise TypeError("matrix must be a matrix (list of lists) +"
+            raise TypeError("matrix must be a matrix (list of lists) "+
                             "of integers/floats")
         else:
             if len(i) != d:
