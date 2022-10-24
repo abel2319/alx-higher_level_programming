@@ -1,0 +1,33 @@
+The ``3-say_my_name`` module
+======================
+
+Using ``say_my_name``
+-------------------
+
+First import ``say_my_name`` from the ``3-say_my_name`` module:
+
+    >>> print_square = __import__('4-print_square').print_square
+
+Now we use it:
+
+normal usage
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+using non-int argument
+    >>> print_square("2")
+    Traceback (most recent call last):
+    TypeError: size msut be an integer
+
+pass any arguments
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+pass infinity
+    >>> print_square(float('inf'))
+    Traceback (most recent call last):
+    TypeError: size msut be an integer
