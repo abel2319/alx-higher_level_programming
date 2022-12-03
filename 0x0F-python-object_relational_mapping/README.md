@@ -1,4 +1,5 @@
 #0x0F. Python - Object-relational mapping
+=============================================
 
 ##Background Context
 
@@ -12,18 +13,18 @@ The biggest difference is: no more SQL queries! Indeed, the purpose of an ORM is
 
 ##Resources
 Read or watch:
-    -Object-relational mappers
-    -mysqlclient/MySQLdb documentation (please don’t pay attention to _mysql)
-    -MySQLdb tutorial
-    -SQLAlchemy tutorial
-    -SQLAlchemy
-    -mysqlclient/MySQLdb
-    -Introduction to SQLAlchemy
-    -Flask SQLAlchemy
-    -10 common stumbling blocks for SQLAlchemy newbies
-    -Python SQLAlchemy Cheatsheet
-    -SQLAlchemy ORM Tutorial for Python Developers (Warning: This tutorial is with PostgreSQL, but the concept of SQLAlchemy is the same with MySQL)
-    -SQLAlchemy Tutorial
+-Object-relational mappers
+-mysqlclient/MySQLdb documentation (please don’t pay attention to _mysql)
+-MySQLdb tutorial
+-SQLAlchemy tutorial
+-SQLAlchemy
+-mysqlclient/MySQLdb
+-Introduction to SQLAlchemy
+-Flask SQLAlchemy
+-10 common stumbling blocks for SQLAlchemy newbies
+-Python SQLAlchemy Cheatsheet
+-SQLAlchemy ORM Tutorial for Python Developers (Warning: This tutorial is with PostgreSQL, but the concept of SQLAlchemy is the same with MySQL)
+-SQLAlchemy Tutorial
 
 ##More Info
 Install MySQLdb module version 2.0.x
