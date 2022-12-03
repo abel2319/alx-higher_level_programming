@@ -1,6 +1,7 @@
 #/usr/bin/python3
 '''
-
+lists all states from the database hbtn_0e_0_usa
+The take 3 arguments: mysql username, mysql password and database name (no argument validation needed)
 '''
 import sys
 import MySQLdb
