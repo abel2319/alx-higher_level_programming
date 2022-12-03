@@ -1,7 +1,7 @@
 0x0F. Python - Object-relational mapping
 =============================================
 
-Background Context
+## Background Context
 
 In this project, you will link two amazing worlds: Databases and Python!
 
@@ -33,30 +33,28 @@ Install __MySQLdb__ module version _2.0.x_
 
 For installing MySQLdb, you need to have MySQL installed: How to install MySQL 8.0 in Ubuntu 20.04
 
-$ sudo apt-get install python3-dev
-$ sudo apt-get install libmysqlclient-dev
-$ sudo apt-get install zlib1g-dev
-$ sudo pip3 install mysqlclient
-...
-$ python3
->>> import MySQLdb
->>> MySQLdb.version_info 
-(2, 0, 3, 'final', 0)
-
-    `this` is an example of inline code.
+    $ sudo apt-get install python3-dev
+    $ sudo apt-get install libmysqlclient-dev
+    $ sudo apt-get install zlib1g-dev
+    $ sudo pip3 install mysqlclient
+    ...
+    $ python3
+    >>> import MySQLdb
+    >>> MySQLdb.version_info 
+    (2, 0, 3, 'final', 0)
 
 Install __SQLAlchemy__ module version _1.4.x_
 
-$ sudo pip3 install SQLAlchemy
-...
-$ python3
->>> import sqlalchemy
->>> sqlalchemy.__version__ 
-'1.4.22'
+    $ sudo pip3 install SQLAlchemy
+    ...
+    $ python3
+    >>> import sqlalchemy
+    >>> sqlalchemy.__version__ 
+    '1.4.22'
 
 Also, you can have this warning message:
 
-/usr/local/lib/python3.4/dist-packages/sqlalchemy/engine/default.py:552: Warning: (1681, "'@@SESSION.GTID_EXECUTED' is deprecated and will be re
+    /usr/local/lib/python3.4/dist-packages/sqlalchemy/engine/default.py:552: Warning: (1681, "'@@SESSION.GTID_EXECUTED' is deprecated and will be re
 moved in a future release.")                                                                                                                    
   cursor.execute(statement, parameters)  
 
