@@ -16,4 +16,4 @@ if __name__ == "__main__":
                          db=sys.argv[3])
     cur = db.cursor()
     cur.execute("SELECT * FROM `states`")
-    [print(state) for state in c.fetchall()]
+    [print(state) for state in cur.fetchall()]
