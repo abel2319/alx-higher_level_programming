@@ -16,7 +16,15 @@ if __name__ == "__main__":
     cur.execute("SELECT cities.name\
                 FROM \
                 `states` INNER JOIN `cities` \
-                WHERE states.name='{}'".format(sys.argv[4]))
-    [print(state) for state in cur.fetchall()]
+                WHERE states.id=cities.state_id AND\
+                states.name='{}'".format(sys.argv[4]))
+    tmp = cur.fetchall()
+    i = len(tmp) - 1
+    for state in tmp:
+        if i != 0:
+            print(f"{state[0]}, ", end="")
+        else:
+            print(state[0])
+        i -= 1
     cur.close()
     db.close()
