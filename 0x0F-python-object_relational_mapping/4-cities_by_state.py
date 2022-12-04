@@ -13,7 +13,10 @@ if __name__ == "__main__":
                          passwd=sys.argv[2],
                          db=sys.argv[3])
     cur = db.cursor()
-    cur.execute("SELECT * FROM `states` JOIN `cities` ORDER BY states.id ASC")
+    cur.execute("SELECT cities.id, cities.name, states.name \
+                FROM \
+                `states` INNER JOIN `cities` \
+                WHERE cities.state_id=states.id ORDER BY cities.id ASC")
     [print(state) for state in cur.fetchall()]
     cur.close()
     db.close()
