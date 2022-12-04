@@ -26,3 +26,5 @@ if __name__ == "__main__":
         else:
             print(state[0])
         i -= 1
+    cur.close()
+    db.close()
