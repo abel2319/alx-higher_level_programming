@@ -14,6 +14,6 @@ if __name__ == "__main__":
                          passwd=sys.argv[2],
                          db=sys.argv[3])
     cur = db.cursor()
-    cur.execute("SELECT * FROM `states` WHERE name LIKE '%[N]%'
-                COLLATE Latin1_General_CS_AS;")
+    cur.execute("SELECT * FROM `states` WHERE name LIKE '%[N]%'" +
+                "COLLATE Latin1_General_CS_AS;")
     [print(state) for state in cur.fetchall()]
