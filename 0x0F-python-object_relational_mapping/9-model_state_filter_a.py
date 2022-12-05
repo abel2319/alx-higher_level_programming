@@ -18,4 +18,4 @@ if __name__ == '__main__':
     result = session.query(State).order_by(State.id)
     for state in result:
         if 'a' in state.name:
-        print(f"{result.id}: {result.name}")
+            print(f"{state.id}: {state.name}")
