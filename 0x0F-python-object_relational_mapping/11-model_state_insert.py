@@ -16,10 +16,4 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    result = session.query(State).order_by(State.id) \
-            .filter(State.name == sys.agrv[4])
-
-    if result is not None:
-        print(f"{state.id}")
-    else:
-        print("No found")
+    result = session.query(State).insert(State.mame='Louisiana')
