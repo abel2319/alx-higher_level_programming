@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-script that prints the State object with the name passed as argument
-from the database hbtn_0e_6_usa
+script that adds the State object “Louisiana” to the database
+hbtn_0e_6_usa
 """
 
 import sys
@@ -16,11 +16,10 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    result = session.query(State).order_by(State.id)
-    i = 0
-    for state in result:
-        if state.name == sys.argv[4]:
-            i = 1
-            print(f"{state.id}")
-    if i == 0:
+    result = session.query(State).order_by(State.id) \
+            .filter(State.name == sys.agrv[4])
+
+    if result is not None:
+        print(f"{state.id}")
+    else:
         print("No found")
