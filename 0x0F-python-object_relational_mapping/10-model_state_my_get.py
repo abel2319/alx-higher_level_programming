@@ -19,6 +19,6 @@ if __name__ == '__main__':
     result = session.query(State).filter(State.name == sys.argv[4])
 
     if result is not None:
-        print(f"{state.id}")
+        print(f"{result.id}")
     else:
         print("No found")
