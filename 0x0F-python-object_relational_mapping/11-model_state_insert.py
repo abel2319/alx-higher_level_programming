@@ -17,5 +17,6 @@ if __name__ == '__main__':
     session = Session()
 
     session.add(State(name="Louisiana"))
+    session.commit()
     result = session.query(State).order_by(ObjectRes.id.desc()).first()
     print(result.id)
