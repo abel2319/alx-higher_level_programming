@@ -16,4 +16,6 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    result = session.query(State).insert(State.mame='Louisiana')
+    session.add(State(name="Louisiana"))
+    result = session.query(State).order_by(ObjectRes.id.desc()).first()
+    print(result.id)
