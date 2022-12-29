@@ -16,7 +16,7 @@ if __name__ == "__main__":
                              data={'q': q})
     if 'application/json' in response.headers.get('Content-Type', ''):
         res = response.json()
-        if res =! {}:
+        if res != {}:
             print("[{}] {}".format(res['id'], res['name']))
         else:
             print('No result')
