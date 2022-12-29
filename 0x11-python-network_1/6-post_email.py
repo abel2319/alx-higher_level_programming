@@ -8,7 +8,5 @@ if __name__ == "__main__":
     import requests
     from sys import argv
 
-    url = argv[1]
-    email = argv[2]
-    req = requests.post(url, data={'Email': email})
+    req = requests.post(argv[1], data={'email': argv[2]})
     print(req.text)
