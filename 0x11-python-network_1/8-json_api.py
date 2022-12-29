@@ -13,7 +13,7 @@ if __name__ == "__main__":
         q = argv[1]
 
     response = requests.post('http://0.0.0.0:5000/search_user',
-                             data=json.dumps({'q': q}))
+                             data={'q': q})
     if 'application/json' in response.headers.get('Content-Type', ''):
         res = response.json()
         if res is not None:
