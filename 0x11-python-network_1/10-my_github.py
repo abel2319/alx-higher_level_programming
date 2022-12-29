@@ -8,7 +8,7 @@ if __name__ == "__main__":
     from sys import argv
     import json
 
-    headers = {'Authorization': 'token ' + token}
+    headers = {'Authorization': 'token ' + argv[2]}
 
     login = requests.get('https://api.github.com/user', headers=headers)
 
