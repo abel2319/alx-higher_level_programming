@@ -8,8 +8,7 @@ if __name__ == "__main__":
     from requests
 
     req = requests(argv[1])
-    req = requests(argv[1])
-    if req.raise_for_status is not None:
+    if req.status_code >= 400:
         print('Error code: {}'.format(req.status_code))
     else:
         print(req.text)
