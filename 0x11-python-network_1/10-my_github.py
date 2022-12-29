@@ -15,7 +15,7 @@ if __name__ == "__main__":
     if 'application/json' in login.headers.get('Content-Type', ''):
         res = login.json()
         if res != {}:
-            print("{}".format(res['id']))
+            print("{}".format(res.get('id')))
         else:
             print('No result')
     else:
