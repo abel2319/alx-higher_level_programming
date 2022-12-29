@@ -8,13 +8,14 @@ if __name__ == "__main__":
     from sys import argv
     import json
 
-    auth = HTTPBasicAuth(sys.argv[1], sys.argv[2])
-    login = requests.get('https://api.github.com/user', auth=auth)
+    headers = {'Authorization': 'token ' + token}
+
+    login = requests.get('https://api.github.com/user', headers=headers)
 
     if 'application/json' in login.headers.get('Content-Type', ''):
         res = login.json()
         if res != {}:
-            print("{}".format(login.json().get('id')))
+            print("{}".format(res.get('id')))
         else:
             print('No result')
     else:
