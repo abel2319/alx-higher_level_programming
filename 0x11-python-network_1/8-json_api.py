@@ -17,7 +17,7 @@ if __name__ == "__main__":
     if 'application/json' in response.headers.get('Content-Type', ''):
         res = response.json()
         if res is not None:
-            print("[{}] {}".format(res.get('id'), res.get('name')))
+            print("[{}] {}".format(res['id'], res['name']))
         else:
             print('No result')
     else:
