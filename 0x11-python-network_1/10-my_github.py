@@ -12,6 +12,10 @@ if __name__ == "__main__":
     login = requests.get('https://api.github.com/user', auth=auth)
 
     if 'application/json' in login.headers.get('Content-Type', ''):
-        print("{}".format(login.json().get('id')))
+        res = login.json()
+        if res != {}:
+            print("{}".format(login.json().get('id')))
+        else:
+            print('No result')
     else:
         print('Not a valid JSON')
