@@ -16,7 +16,6 @@ if __name__ == "__main__":
                          auth=(username, token))
 
     if 'application/json' in login.headers.get('Content-Type', ''):
-        res = login.json()
-            print("{}".format(login.json().get('id')))
+        print("{}".format(login.json().get('id')))
     else:
         print('Not a valid JSON')
