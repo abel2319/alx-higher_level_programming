@@ -8,7 +8,6 @@ if __name__ == "__main__":
     from urllib.request import Request, urlopen
     from urllib.error import URLError, HTTPError
 
-
     req = Request(argv[1])
     try:
         response = urlopen(req)
