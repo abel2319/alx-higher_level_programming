@@ -8,12 +8,8 @@ if __name__ == "__main__":
     from sys import argv
     import json
 
-    username = argv[1]
-    token = argv[2]
-    headers = {'Authorization': 'token ' + token}
-    login = requests.get('https://api.github.com/\
-                         search/repositories?q=github+api',
-                         auth=(username, token))
+    auth = HTTPBasicAuth(sys.argv[1], sys.argv[2])
+    login = requests.get('https://api.github.com/user', auth=auth)
 
     if 'application/json' in login.headers.get('Content-Type', ''):
         print("{}".format(login.json().get('id')))
