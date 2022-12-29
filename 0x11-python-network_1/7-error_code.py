@@ -5,7 +5,7 @@ the URL and displays the body of the response."""
 
 if __name__ == "__main__":
     from sys import argv
-    from requests
+    import requests
 
     req = requests(argv[1])
     if req.status_code >= 400:
