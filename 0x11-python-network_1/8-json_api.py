@@ -16,9 +16,9 @@ if __name__ == "__main__":
                              data={'q': q})
     if 'application/json' in response.headers.get('Content-Type', ''):
         res = response.json()
-        if res is not None:
+        if res =! {}:
             print("[{}] {}".format(res['id'], res['name']))
         else:
             print('No result')
     else:
-        print('Not a valide JSON')
+        print('Not a valid JSON')
