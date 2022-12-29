@@ -9,4 +9,4 @@ if __name__ == "__main__":
     from sys import argv
 
     req = requests.get(argv[1], data={'Email': argv[2]})
-    print(req.text())
+    print(req.text)
