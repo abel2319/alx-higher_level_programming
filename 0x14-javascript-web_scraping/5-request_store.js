@@ -1,5 +1,5 @@
 #!/usr/bin/node
-/* script that prints the title of a Star Wars movie where the episode number matches a given integer. */
+/* script that gets the contents of a webpage and stores it in a file. */
 
 const request = require('request');
 const fs = require('fs');
