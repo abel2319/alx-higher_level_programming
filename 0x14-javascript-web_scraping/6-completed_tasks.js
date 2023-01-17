@@ -6,11 +6,10 @@ const request = require('request');
 const url = process.argv[2];
 
 request(url, (err, data, body) => {
-  
   if (err) console.error('error:', err);
-  
-  bod = JSON.parse(body);
-  output = {};
+
+  const bod = JSON.parse(body);
+  const output = {};
 
   bod.map(dict => {
     if (dict.completed && output[dict.userId] === undefined) {
@@ -18,6 +17,7 @@ request(url, (err, data, body) => {
     } else if (dict.completed) {
       output[dict.userId] += 1;
     }
+    return (1);
   });
   console.log(output);
 });
